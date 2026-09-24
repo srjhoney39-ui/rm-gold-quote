@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rm-gold-quote"
+version = "0.1.0"
+description = "Live XAU/USD (spot gold) reference quote, ready to use as a Claude tool."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "RM Intelligence" }]
+keywords = ["gold", "xauusd", "xau-usd", "spot gold", "claude", "anthropic", "tool use", "llm", "market data"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business :: Financial :: Investment",
+  "Intended Audience :: Developers",
+]
+dependencies = []
+
+[project.optional-dependencies]
+claude = ["anthropic>=0.40"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://rmclub.org/research/methodology/"
+"Daily gold report" = "https://rmclub.org/research/gold-macro-report/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
